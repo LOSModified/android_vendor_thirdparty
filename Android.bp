@@ -1,0 +1,218 @@
+soong_namespace {
+}
+
+android_app_import {
+    name: "Gramophone",
+    owner: "thirdparty",
+    apk: "proprietary/product/app/Gramophone/Gramophone.apk",
+    preprocessed: true,
+    presigned: true,
+    overrides: [
+        "Eleven",
+        "Music",
+        "Twelve",
+    ],
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+android_app_import {
+    name: "RootExplorer",
+    owner: "thirdparty",
+    apk: "proprietary/product/app/RootExplorer/RootExplorer.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+android_app_import {
+    name: "Via",
+    owner: "thirdparty",
+    apk: "proprietary/product/app/Via/Via.apk",
+    preprocessed: true,
+    presigned: true,
+    overrides: [
+        "Browser2",
+        "CarHTMLViewer",
+        "Jelly",
+    ],
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "adb.bin",
+    owner: "thirdparty",
+    srcs: ["proprietary/product/bin/adb.bin"],
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "fastboot",
+    owner: "thirdparty",
+    srcs: ["proprietary/product/bin/fastboot"],
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "flash_erase",
+    owner: "thirdparty",
+    srcs: ["proprietary/product/bin/flash_erase"],
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "flash_lock",
+    owner: "thirdparty",
+    srcs: ["proprietary/product/bin/flash_lock"],
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "flash_unlock",
+    owner: "thirdparty",
+    srcs: ["proprietary/product/bin/flash_unlock"],
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "nanddump",
+    owner: "thirdparty",
+    srcs: ["proprietary/product/bin/nanddump"],
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "nandwrite",
+    owner: "thirdparty",
+    srcs: ["proprietary/product/bin/nandwrite"],
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "nano.bin",
+    owner: "thirdparty",
+    srcs: ["proprietary/product/bin/nano.bin"],
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "zip",
+    owner: "thirdparty",
+    srcs: ["proprietary/product/bin/zip"],
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "zipalign",
+    owner: "thirdparty",
+    srcs: ["proprietary/product/bin/zipalign"],
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libandroidx.graphics.path",
+    owner: "thirdparty",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/product/lib64/libandroidx.graphics.path.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdlfunc",
+    owner: "thirdparty",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/product/lib64/libdlfunc.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    product_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhificore",
+    owner: "thirdparty",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/product/lib64/libhificore.so"],
+        },
+    },
+    compile_multilib: "64",
+    check_elf_files: false,
+    prefer: true,
+    product_specific: true,
+}
