@@ -1,0 +1,49 @@
+soong_namespace {
+}
+
+android_app_import {
+	name: "MetroMusic",
+	owner: "thirdparty",
+	apk: "proprietary/product/app/MetroMusic/MetroMusic.apk",
+	presigned: true,
+	overrides: ["Eleven"],
+	dex_preopt: {
+		enabled: false,
+	},
+	product_specific: true,
+}
+
+android_app_import {
+	name: "RootExplorer",
+	owner: "thirdparty",
+	apk: "proprietary/product/app/RootExplorer/RootExplorer.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	product_specific: true,
+}
+
+android_app_import {
+	name: "SimpleCalendar",
+	owner: "thirdparty",
+	apk: "proprietary/product/app/SimpleCalendar/SimpleCalendar.apk",
+	presigned: true,
+	overrides: ["Etar"],
+	dex_preopt: {
+		enabled: false,
+	},
+	product_specific: true,
+}
+
+android_app_import {
+	name: "Via",
+	owner: "thirdparty",
+	apk: "proprietary/product/app/Via/Via.apk",
+	presigned: true,
+	overrides: ["Jelly"],
+	dex_preopt: {
+		enabled: false,
+	},
+	product_specific: true,
+}
